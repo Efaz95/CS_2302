@@ -120,12 +120,4 @@ while (play_again.lower() == 'y'):
     check_winner()
     number_of_games += 1
     play_again = input("Play Again? 'Y/N': ")
-<<<<<<< HEAD
     print("+==============================+")
-    
-=======
-    print("==============================")
-
-
-
->>>>>>> 2690a231b1f682de7a3e86f1f7464599c5753e53
