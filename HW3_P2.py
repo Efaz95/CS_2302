@@ -19,6 +19,7 @@ def player1Turn(deck):
     print("Player 1 turn:")
     for _ in range(2):
         rank = random.choice(deck.ranks)
+        suit = random.choice(deck.suits)
         if rank in ['J','Q','K','A']:
             if rank == 'J':
                 rank = 11
@@ -29,9 +30,28 @@ def player1Turn(deck):
             if rank == 'A':
                 rank = 1
         player1_score += int(rank)
-        print(rank, random.choice(deck.suits))
-        
-    print("Playe 1 score: {}".format(player1_score))
+        #print(rank, suit)
+        print("-"*10)
+        if (rank in ['10',11,12,13]):
+            print("|{}      |".format(rank))
+            print("|{}       |".format(suit))
+            print("|        |")
+            print("|   {}    |".format(suit))
+            print("|        |")
+            print("|       {}|".format(suit))
+            print("|      {}|".format(rank))
+            print("-"*10)
+        else:
+            print("|{}       |".format(rank))
+            print("|{}       |".format(suit))
+            print("|        |")
+            print("|   {}    |".format(suit))
+            print("|        |")
+            print("|       {}|".format(suit))
+            print("|       {}|".format(rank))
+            print("-"*10)
+                
+    print("Player 1 score: {}".format(player1_score))
     
 def player2Turn(deck):
     global player2_score
@@ -39,6 +59,7 @@ def player2Turn(deck):
     print("Player 2 turn:")
     for _ in range(2):
         rank = random.choice(deck.ranks)
+        suit = random.choice(deck.suits)
         if rank in ['J','Q','K','A']:
             if rank == 'J':
                 rank = 11
@@ -49,7 +70,26 @@ def player2Turn(deck):
             if rank == 'A':
                 rank = 1
         player2_score += int(rank)
-        print(rank, random.choice(deck.suits))
+        #print(rank, suit)
+        print("-"*10)
+        if (rank in ['10',11,12,13]):
+            print("|{}      |".format(rank))
+            print("|{}       |".format(suit))
+            print("|        |")
+            print("|   {}    |".format(suit))
+            print("|        |")
+            print("|       {}|".format(suit))
+            print("|      {}|".format(rank))
+            print("-"*10)
+        else:
+            print("|{}       |".format(rank))
+            print("|{}       |".format(suit))
+            print("|        |")
+            print("|   {}    |".format(suit))
+            print("|        |")
+            print("|       {}|".format(suit))
+            print("|       {}|".format(rank))
+            print("-"*10)
         
     print("Playe 2 score: {}".format(player2_score))
 
@@ -81,4 +121,6 @@ while (play_again.lower() == 'y'):
     number_of_games += 1
     play_again = input("Play Again? 'Y/N': ")
     print("==============================")
-    
+
+
+
