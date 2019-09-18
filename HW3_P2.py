@@ -13,6 +13,7 @@ Deck = Card()
 player1_win_num = 0
 player2_win_num = 0
 
+
 def player1Turn(deck):
     global player1_score
     player1_score = 0
@@ -30,7 +31,6 @@ def player1Turn(deck):
             if rank == 'A':
                 rank = 1
         player1_score += int(rank)
-        #print(rank, suit)
         print("-"*10)
         if (rank in ['10',11,12,13]):
             print("|{}      |".format(rank))
@@ -51,8 +51,9 @@ def player1Turn(deck):
             print("|       {}|".format(rank))
             print("-"*10)
                 
-    print("Player 1 score: {}".format(player1_score))
+    return ("Player 1 score: {}".format(player1_score))
     
+
 def player2Turn(deck):
     global player2_score
     player2_score = 0
@@ -70,7 +71,6 @@ def player2Turn(deck):
             if rank == 'A':
                 rank = 1
         player2_score += int(rank)
-        #print(rank, suit)
         print("-"*10)
         if (rank in ['10',11,12,13]):
             print("|{}      |".format(rank))
@@ -91,7 +91,8 @@ def player2Turn(deck):
             print("|       {}|".format(rank))
             print("-"*10)
         
-    print("Playe 2 score: {}".format(player2_score))
+    return("Player 2 score: {}".format(player2_score))
+
 
 def check_winner():
     global player1_win_num
@@ -109,15 +110,15 @@ def check_winner():
     print("Overall results")
     print("Player 1 total wins: {}, Player 2 total wins: {}".format(player1_win_num, player2_win_num))
 
+
 play_again = 'Y'
 number_of_games = 1
 while (play_again.lower() == 'y'):
     print("Game Number: {}".format(number_of_games))
-    player1Turn(Deck)
+    print(player1Turn(Deck))
     print("\n")
-    player2Turn(Deck)
+    print(player2Turn(Deck))
     print("\n")
     check_winner()
     number_of_games += 1
     play_again = input("Play Again? 'Y/N': ")
-    print("+==============================+")
