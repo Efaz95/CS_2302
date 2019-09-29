@@ -3,6 +3,7 @@ import tkinter
 window = tkinter.Tk()
 window.title("Calculator")
 
+
 def close_window(): 
     window.destroy()
 
