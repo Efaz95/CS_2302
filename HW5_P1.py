@@ -77,4 +77,5 @@ divide_btn.grid(row=7, column=1, sticky='nesw')
 quit_btn = tkinter.Button(window, text="QUIT", command = close_window)
 quit_btn.grid(row=8, column=0, columnspan=2)
 
+
 window.mainloop()
